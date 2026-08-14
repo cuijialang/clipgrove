@@ -1,0 +1,4 @@
+Sitemap: https://clipgrove.com/sitemap.xml
+
+User-agent: *
+Allow: /

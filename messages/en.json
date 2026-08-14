@@ -1,0 +1,189 @@
+{
+  "Common": {
+    "loading": "loading..."
+  },
+  "Navigation": {
+    "title": "ClipGrove - AI Video Tools Directory",
+    "discover": "Discover",
+    "submit": "Submit",
+    "explore": "Explore",
+    "newtools": "New Tools",
+    "startup": "Startup",
+    "menu": "menu"
+  },
+  "Footer": {
+    "title": "ClipGrove - AI Video Generation Tools Directory",
+    "subTitle": "Discover the best AI video generation tools. Curated, updated daily, free to explore.",
+    "support": "Support",
+    "tap4": "ClipGrove",
+    "tattoo": "AI Video Generator",
+    "privacy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "contactUs": "Contact Us"
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions",
+    "1": {
+      "question": "What is ClipGrove AI Video Tools Directory?",
+      "answer": "ClipGrove is a curated directory of AI video generation tools. Find AI video generators, AI animation tools, AI video editors, text-to-video tools, AI avatar creators, and more — all in one place."
+    },
+    "2": {
+      "question": "How to find the right AI video tool on ClipGrove?",
+      "answer-1": "1. Browse by category (Text-to-Video, AI Animation, AI Avatar, etc.).",
+      "answer-2": "2. Use the search bar to find specific tools.",
+      "answer-3": "3. Click any tool to see details, pricing, and visit the website."
+    },
+    "3": {
+      "question": "What types of AI video tools does ClipGrove cover?",
+      "answer-1": "1. Text-to-Video: Convert text prompts into videos (Runway, Pika, Sora, etc.).",
+      "answer-2": "2. AI Animation: Create animated videos with AI.",
+      "answer-3": "3. AI Avatar: Generate talking avatars and digital humans.",
+      "answer-4": "4. AI Video Editing: Smart editing, auto-subtitles, background removal.",
+      "answer-5": "5. AI Shorts/Reels: Create short-form videos for social media."
+    },
+    "4": {
+      "question": "Is it free to submit AI video tools to ClipGrove?",
+      "answer": "Yes, submitting AI video tools is currently free. We welcome all AI video tool developers to list their products."
+    },
+    "5": {
+      "question": "What categories does ClipGrove support?",
+      "answer": "We cover 8 main categories: Text-to-Video, AI Animation, AI Avatar, AI Video Editing, AI Shorts, AI Image-to-Video, AI Voiceover, and AI Video Enhancement."
+    },
+    "6": {
+      "question": "How often is the tool list updated?",
+      "answer": "The AI video tools list is updated daily. We continuously monitor new tools and update existing listings."
+    },
+    "7": {
+      "question": "Does ClipGrove support Sora AI or other new tools?",
+      "answer": "Yes! We track the latest AI video tools including Sora, Runway Gen-3, Pika 2.0, Kling, and more. You can find detailed information and comparisons."
+    },
+    "8": {
+      "question": "Troubleshooting",
+      "answer": "If content isn't appearing, try a different browser or clear your cache. If issues persist, contact us."
+    },
+    "9": {
+      "question": "How is ClipGrove content generated?",
+      "answer": "Tool descriptions are AI-assisted and manually curated. We verify tool information for accuracy."
+    },
+    "10": {
+      "question": "What are the usage rights of the AI tools?",
+      "answer": "ClipGrove is a directory only. Each AI tool has its own terms of service and usage rights — please check the tool's website for details."
+    },
+    "11": {
+      "question": "Is ClipGrove open source?",
+      "answer": "ClipGrove is built on the open-source Tap4 AI WebUI framework. We welcome contributions and feedback."
+    }
+  },
+  "FooterNavigation": {
+    "privacyPolicy": {
+      "1-h1": "Privacy Policy for ClipGrove",
+      "1-p": "This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information. If you choose to use our Service, you agree to the collection and use of information in relation to this policy. We will not use or share your information with anyone except as described in this Privacy Policy.",
+      "2-h2": "1. Information Collection and Use",
+      "2-p": "For a better experience, we may require you to provide certain personally identifiable information. The information will be retained on your device and is not collected by us in any way. The app does use third-party services that may collect information.",
+      "3-h2": "2. Log Data",
+      "3-p": "Whenever you use our Service, in case of an error we collect data and information (through third-party products) called Log Data. This may include your device IP address, device name, operating system version, and other statistics.",
+      "4-h2": "3. Cookies",
+      "4-p": "Cookies are files with a small amount of data used as anonymous unique identifiers. This Service does not use cookies explicitly but may use third-party code that uses cookies. You can accept or refuse these cookies.",
+      "5-h2": "4. Service Providers",
+      "5-p-1": "We may employ third-party companies for the following reasons:",
+      "5-li-1": "To facilitate our Service;",
+      "5-li-2": "To provide the Service on our behalf;",
+      "5-li-3": "To perform Service-related services;",
+      "5-li-4": "To assist us in analyzing how our Service is used;",
+      "5-p-2": "These third parties have access to your Personal Information only to perform tasks on our behalf.",
+      "6-h2": "5. Security",
+      "6-p": "We value your trust in providing us your Personal Information and strive to use commercially acceptable means of protecting it. No method of transmission over the internet is 100% secure.",
+      "7-h2": "6. Links to Other Sites",
+      "7-p": "This Service may contain links to other sites. We have no control over and assume no responsibility for the content or practices of any third-party sites.",
+      "8-h2": "7. Changes to This Privacy Policy",
+      "8-p": "We may update our Privacy Policy from time to time. Changes are effective immediately after they are posted on this page."
+    },
+    "termsConditions": {
+      "1-h1": "Terms of Service for ClipGrove",
+      "1-p": "Welcome to ClipGrove! By accessing or using our website, you agree to be bound by these Terms of Service. If you do not agree, you are prohibited from using the Website.",
+      "2-h2": "1. Use License",
+      "2-p": "You are granted a limited, non-exclusive, non-transferable license to use the Website for personal, non-commercial purposes.",
+      "3-h2": "2. Ownership",
+      "3-p": "ClipGrove is a directory of third-party tools. We do not claim ownership over any listed tools or their content.",
+      "4-h2": "3. User Data Collection",
+      "4-p": "We collect personal data (name, email) and non-personal data (cookies) to improve our services. See our Privacy Policy for details.",
+      "terms-of-service": "terms-of-service",
+      "5-h2": "4. Governing Law",
+      "5-p": "These Terms shall be governed by the laws of the People's Republic of China.",
+      "6-h2": "5. Changes to Terms",
+      "6-p": "ClipGrove reserves the right to modify these Terms at any time. Your continued use constitutes acceptance of changes.",
+      "7-h2": "6. Contact Information",
+      "7-p": "If you have any questions about these Terms, please contact us.",
+      "last-p": "By using ClipGrove, you signify your acceptance of these Terms of Service."
+    }
+  },
+  "NotFound": {
+    "title": "404 Not Found",
+    "goHome": "go home"
+  },
+  "Home": {
+    "title": "Discover the Best AI Video Generation Tools",
+    "subTitle": "ClipGrove curates the best AI video tools — text-to-video, AI animation, AI avatars, video editing, and more. Updated daily, free to explore.",
+    "ai-navigate": "AI Video Tools",
+    "exploreMore": "Explore More Tools",
+    "checkDetail": "View Detail",
+    "search": "Search AI Video Tools...",
+    "result": "Search Results",
+    "empty": "No tools found"
+  },
+  "Category": {
+    "home": "home",
+    "empty": "No tools available"
+  },
+  "Submit": {
+    "title": "Submit Your AI Video Tool",
+    "subTitle": "List your AI video tool on ClipGrove and reach thousands of creators looking for the best AI video solutions.",
+    "website": "Tool Name",
+    "url": "Website URL",
+    "submit": "Submit",
+    "add": "Add",
+    "text": "to your website homepage to submit your AI video tool for free!",
+    "networkError": "Network Error",
+    "success": "Submitted successfully!"
+  },
+  "Startup": {
+    "title": "Launch Your AI Video Startup",
+    "subTitle": "The ultimate list of platforms to launch and promote your AI video startup. For listing inquiries, contact us.",
+    "updateTime": "Curated and updated daily. Last updated:",
+    "table": {
+      "da": "DA",
+      "website": "Website",
+      "tags": "Tags",
+      "price": "Price",
+      "submission": "Submission"
+    },
+    "detail": {
+      "visitWebsite": "Visit Website",
+      "introduction": "Introduction"
+    }
+  },
+  "Explore": {
+    "title": "Explore AI Video Generation Tools",
+    "subTitle": "Browse the most comprehensive collection of AI video tools. From text-to-video to AI animation, find the perfect tool for your creative workflow."
+  },
+  "Metadata": {
+    "home": {
+      "title": "ClipGrove - Best AI Video Generation Tools Directory | Text-to-Video, AI Animation",
+      "description": "ClipGrove is the best AI video tools directory. Discover text-to-video, AI animation, AI avatar, AI video editing tools. Curated daily, free to explore.",
+      "keywords": "AI video tools, AI video generator, text to video, AI animation, AI avatar, video editing AI, ClipGrove"
+    },
+    "ai": {
+      "titleSubfix": "ClipGrove"
+    },
+    "explore": {
+      "title": "Explore AI Video Tools | ClipGrove AI Video Tools Directory",
+      "titlePrefix": "ClipGrove Explore",
+      "titleSuffix": "ClipGrove",
+      "description": "Explore the best AI video generation tools on ClipGrove. Find text-to-video, AI animation, AI avatar, and video editing tools. Updated daily.",
+      "keywords": "AI video tools, AI video generator, text to video, AI animation, ClipGrove"
+    },
+    "submit": {
+      "title": "Submit Your AI Video Tool | ClipGrove"
+    }
+  }
+}
