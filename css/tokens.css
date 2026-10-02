@@ -1,0 +1,82 @@
+/* ==========================================================
+   瓜瓜英语 · Design Tokens
+   见 .design-contract.md §3 —— 页面不得硬编码色值/圆角/间距
+   ========================================================== */
+
+:root {
+  /* ---- 品牌 ---- */
+  --c-brand: #FF7A45;
+  --c-brand-2: #FFB020;
+
+  /* ---- 强调 ---- */
+  --c-sky: #38A9FF;
+  --c-mint: #2FCB8B;
+  --c-berry: #FF5C8A;
+  --c-grape: #8B5CF6;
+
+  /* ---- 中性 ---- */
+  --c-ink: #2B2136;
+  --c-ink-2: #7A7192;
+  --c-ink-3: #B4ACC6;
+  --c-line: rgba(43, 33, 54, .08);
+
+  /* ---- 面 ---- */
+  --c-bg-1: #FFF8EE;
+  --c-bg-2: #FDEEF0;
+  --c-bg-3: #E9F2FF;
+  --c-card: #FFFFFF;
+  --c-card-2: #F6F4FB;
+  --c-card-3: #FDF7F1;
+
+  /* ---- 功能色 ---- */
+  --c-ok: #128A49;
+  --c-ok-bg: #E5FBEE;
+  --c-no: #D63A67;
+  --c-no-bg: #FFEEF2;
+
+  /* ---- 圆角 ---- */
+  --r-sm: 14px;
+  --r-md: 20px;
+  --r-lg: 28px;
+  --r-xl: 34px;
+  --r-pill: 999px;
+
+  /* ---- 间距 ---- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+
+  /* ---- 字号 ---- */
+  --f-cap: 12px;
+  --f-xs: 13px;
+  --f-sm: 15px;
+  --f-md: 17px;
+  --f-lg: 20px;
+  --f-xl: 26px;
+  --f-2xl: 34px;
+  --f-3xl: 44px;
+
+  /* ---- 投影 ---- */
+  --sh-1: 0 4px 14px rgba(96, 74, 130, .10);
+  --sh-2: 0 10px 26px rgba(96, 74, 130, .13);
+  --sh-brand: 0 8px 18px rgba(255, 138, 61, .35);
+
+  /* ---- 动效 ---- */
+  --ease-pop: cubic-bezier(.18, .9, .32, 1.28);
+  --t-fast: 140ms;
+  --t-base: 240ms;
+  --t-slow: 360ms;
+
+  /* ---- 安全区 ---- */
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+
+  /* ---- 布局 ---- */
+  --tabbar-h: 62px;
+  --topbar-h: 56px;
+  --app-max: 460px;
+}

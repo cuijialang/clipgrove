@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, maximum-scale=1.0">
+<meta name="theme-color" content="#FF7A45">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="description" content="瓜瓜英语 —— 面向 4-6 岁儿童的英语启蒙高保真交互原型，参照叽里呱啦功能架构自建">
+<title>瓜瓜英语 · 4-6岁儿童英语启蒙</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/views.css">
+</head>
+<body>
+
+<!-- ==================== App Shell（所有视图共用，逐字节一致） ==================== -->
+<div id="app" data-chassis="tab">
+
+  <header id="topbar" class="topbar is-hidden">
+    <button id="btnBack" class="icon-btn" type="button" aria-label="返回">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div id="topTitle" class="topbar-title"></div>
+    <div class="star-chip"><span class="star-chip-ico">★</span><b id="topStars">0</b></div>
+  </header>
+
+  <main id="screen" class="screen"></main>
+
+  <nav id="tabbar" class="tabbar is-hidden" aria-label="主导航"></nav>
+
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- ==================== 脚本层 ==================== -->
+<!-- 数据 -->
+<script src="js/data.js"></script>
+<script src="assets/audio/manifest.js"></script>
+
+<!-- 服务层 -->
+<script src="js/api.js"></script>
+<script src="js/speech.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/ui.js"></script>
+
+<!-- 外壳与视图注册表（必须早于视图加载：视图在它上面 register） -->
+<script src="js/app.js"></script>
+
+<!-- 视图层（只做注册，不直接操作 DOM；挂载由外壳在 DOMContentLoaded 后触发） -->
+<script src="js/views/home.js"></script>
+<script src="js/views/courses.js"></script>
+<script src="js/views/listen.js"></script>
+<script src="js/views/me.js"></script>
+<script src="js/views/learn.js"></script>
+<script src="js/views/quiz.js"></script>
+<script src="js/views/result.js"></script>
+<script src="js/views/story.js"></script>
+<script src="js/views/parent.js"></script>
+
+</body>
+</html>
