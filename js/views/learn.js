@@ -17,9 +17,9 @@
     chassis: 'flow',
     title: function (p) {
       var u = global.GUAGUA_DATA.getUnit(p && p.unit);
-      return u ? (u.titleZh + ' · 单词卡') : '单词卡';
+      return u ? (u.titleZh + ' · 学习') : '学习';
     },
-    back: 'courses',
+    back: 'unit',
 
     render: function (ctx) {
       var UI = ctx.ui, DATA = ctx.data;
@@ -63,7 +63,7 @@
           '<button class="btn btn-ghost" type="button" data-act="prev"' +
             (i === 0 ? ' disabled' : '') + '>上一个</button>' +
           '<button class="btn btn-primary" type="button" data-act="next">' +
-            (i === len - 1 ? '去闯关' : '下一个') +
+            (i === len - 1 ? '去练习' : '下一个') +
           '</button>' +
         '</div>';
 
@@ -182,8 +182,10 @@
 
       var next = root.querySelector('[data-act="next"]');
       next.addEventListener('click', function () {
-        if (i < len - 1) ctx.go('learn', { unit: unit.id, i: i + 1 });
-        else ctx.go('quiz', { unit: unit.id });
+        if (i < len - 1) { ctx.go('learn', { unit: unit.id, i: i + 1 }); return; }
+        /* 走完最后一张单词卡 → 学习环节完成，进入练习环节 */
+        ctx.api.completeStage(unit.id, 'learn', { score: len, total: len, stars: 3 });
+        ctx.go('practice', { unit: unit.id });
       });
 
       /* 进入视图自动朗读一次（被浏览器拦截时静默失败） */

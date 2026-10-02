@@ -40,23 +40,45 @@
             '<div class="me-sub">' + profile.age + ' 岁 · ' + esc(profile.level) +
               ' · 连续打卡 ' + profile.streakDays + ' 天</div>' +
           '</div>' +
+          '<span class="hello-badges">' +
+            '<span class="badge badge-gem">&#9670; ' + report.gems + '</span>' +
+            '<span class="badge">勋章 ' + report.badges + '/' + report.totalBadges + '</span>' +
+          '</span>' +
         '</div>';
 
       html += '' +
         '<div class="achieve-row">' +
           '<div class="achieve-card">' +
-            '<div class="achieve-num">' + report.stars + '</div>' +
-            '<div class="achieve-label">获得星星</div>' +
+            '<div class="achieve-num">' + report.gems + '</div>' +
+            '<div class="achieve-label">我的魔石</div>' +
           '</div>' +
           '<div class="achieve-card">' +
-            '<div class="achieve-num">' + report.wordsLearned + '</div>' +
-            '<div class="achieve-label">已学单词</div>' +
+            '<div class="achieve-num">' + report.stagesDone + '/' + report.stagesTotal + '</div>' +
+            '<div class="achieve-label">完成环节</div>' +
           '</div>' +
           '<div class="achieve-card">' +
-            '<div class="achieve-num">' + report.rhymesHeard + '/' + report.totalRhymes + '</div>' +
-            '<div class="achieve-label">听过儿歌</div>' +
+            '<div class="achieve-num">' + report.badges + '/' + report.totalBadges + '</div>' +
+            '<div class="achieve-label">成长勋章</div>' +
           '</div>' +
         '</div>';
+
+      /* ---- 养成入口 ---- */
+      html += '<div class="section-title"><span>我的养成</span>' +
+              '<span class="section-more">边玩边攒</span></div>' +
+              '<div class="grow-grid">' +
+                '<button class="grow-tile" type="button" data-go="house">' +
+                  '<img src="' + esc(DATA.houseItems[0].img) + '" alt="">' +
+                  '<b>呱呱小屋</b><span>已拥有 ' + API.progress.house.owned.length + ' 件</span>' +
+                '</button>' +
+                '<button class="grow-tile" type="button" data-go="badges">' +
+                  '<img src="' + esc(DATA.units[0].ico) + '" alt="">' +
+                  '<b>成长勋章</b><span>' + report.badges + ' / ' + report.totalBadges + ' 已获得</span>' +
+                '</button>' +
+                '<button class="grow-tile" type="button" data-go="wrongbook">' +
+                  '<img src="' + esc(DATA.units[2].ico) + '" alt="">' +
+                  '<b>错词本</b><span>' + report.wrongCount + ' 个待攻克</span>' +
+                '</button>' +
+              '</div>';
 
       /* ---- 本周打卡 ---- */
       html += '<div class="section-title"><span>本周打卡</span>' +
@@ -110,6 +132,13 @@
     },
 
     mount: function (root, ctx) {
+      /* 养成入口：呱呱小屋 / 成长勋章 / 错词本 */
+      Array.prototype.forEach.call(root.querySelectorAll('[data-go]'), function (el) {
+        el.addEventListener('click', function () {
+          ctx.go(el.getAttribute('data-go'));
+        });
+      });
+
       root.querySelector('[data-act="parent"]').addEventListener('click', function () {
         ctx.go('parent');
       });

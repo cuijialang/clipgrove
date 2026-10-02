@@ -14,10 +14,10 @@
     return '晚上好呀';
   }
 
-  /** 继续学习：优先选「还没闯过关」的第一个单元 */
+  /** 继续学习：优先选「练习环节还没完成」的第一个单元 */
   function nextUnit(API, DATA) {
     for (var i = 0; i < DATA.units.length; i++) {
-      if (!API.unitRecord(DATA.units[i].id).plays) return DATA.units[i];
+      if (!API.stageRecord(DATA.units[i].id).practice) return DATA.units[i];
     }
     return DATA.units[0];
   }
@@ -48,7 +48,10 @@
             '<div class="hello-hi">' + greeting() + '</div>' +
             '<div class="hello-name">' + esc(profile.name) + '</div>' +
           '</div>' +
-          '<span class="badge">' + esc(profile.level) + '</span>' +
+          '<span class="hello-badges">' +
+            '<span class="badge">' + esc(profile.level) + '</span>' +
+            '<span class="badge badge-gem">&#9670; ' + API.progress.gems + '</span>' +
+          '</span>' +
         '</div>';
 
       /* ---- 今日进度环 ---- */
@@ -145,14 +148,14 @@
       var cont = root.querySelector('[data-continue]');
       if (cont) {
         cont.addEventListener('click', function () {
-          go('learn', { unit: cont.getAttribute('data-continue'), i: 0 });
+          go('unit', { unit: cont.getAttribute('data-continue') });
         });
       }
 
       /* 单元横滑 */
       Array.prototype.forEach.call(root.querySelectorAll('[data-unit]'), function (el) {
         el.addEventListener('click', function () {
-          go('learn', { unit: el.getAttribute('data-unit'), i: 0 });
+          go('unit', { unit: el.getAttribute('data-unit') });
         });
       });
 

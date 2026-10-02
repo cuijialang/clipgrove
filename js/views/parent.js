@@ -56,6 +56,37 @@
           '</div>';
       });
 
+      /* ---- 逐课学习报告（最近 8 次环节记录） ---- */
+      var STAGE_NAME = {};
+      DATA.STAGES.forEach(function (st) { STAGE_NAME[st.id] = st.name; });
+
+      var lessons = (API.progress.lessons || []).slice().reverse().slice(0, 8);
+      html += '<div class="section-title"><span>逐课学习报告</span>' +
+              '<span class="section-more">最近 ' + lessons.length + ' 次</span></div>';
+
+      if (!lessons.length) {
+        html += '<div class="empty">还没有完成任何学习环节，去闯一关就会记录在这里</div>';
+      } else {
+        html += '<div class="report-list">';
+        lessons.forEach(function (l) {
+          var u = DATA.getUnit(l.unitId) || DATA.units[0];
+          var d = new Date(l.at || Date.now());
+          var two = function (n) { return ('0' + n).slice(-2); };
+          html += '' +
+            '<div class="report-row">' +
+              '<img src="' + esc(u.ico) + '" alt="">' +
+              '<span class="report-body">' +
+                '<b>' + esc(u.titleZh) + ' · ' + esc(STAGE_NAME[l.stage] || l.stage) + '</b>' +
+                '<i>' + two(d.getMonth() + 1) + '-' + two(d.getDate()) + ' ' +
+                  two(d.getHours()) + ':' + two(d.getMinutes()) +
+                  ' · 答对 ' + l.score + '/' + l.total + '</i>' +
+              '</span>' +
+              UI.stars(l.stars) +
+            '</div>';
+        });
+        html += '</div>';
+      }
+
       /* ---- 真人配音覆盖（当前为 0%，登记 mp3 后自动生效） ---- */
       var cov = ctx.audio.coverage();
       html += '<div class="section-title"><span>音频资源</span></div>' +
