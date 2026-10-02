@@ -51,9 +51,26 @@
 <!-- 外壳与视图注册表（必须早于视图加载：视图在它上面 register） -->
 <script src="js/app.js"></script>
 
+<!-- 玩法引擎（必须在 app.js 之后：host.js 会在它上面注册 practice/review/apply 视图） -->
+<script src="js/games/registry.js"></script>
+<script src="js/games/listen-pick.js"></script>
+<script src="js/games/pick-word.js"></script>
+<script src="js/games/speak-word.js"></script>
+<script src="js/games/pair.js"></script>
+<script src="js/games/trace.js"></script>
+<script src="js/games/puzzle.js"></script>
+<script src="js/games/bubble.js"></script>
+<script src="js/games/match-line.js"></script>
+<script src="js/games/spot-diff.js"></script>
+<script src="js/games/phonics.js"></script>
+<script src="js/games/roleplay.js"></script>
+<script src="js/games/host.js"></script>
+
 <!-- 视图层（只做注册，不直接操作 DOM；挂载由外壳在 DOMContentLoaded 后触发） -->
 <script src="js/views/home.js"></script>
 <script src="js/views/courses.js"></script>
+<script src="js/views/unit.js"></script>
+<script src="js/views/warm.js"></script>
 <script src="js/views/listen.js"></script>
 <script src="js/views/me.js"></script>
 <script src="js/views/learn.js"></script>
@@ -61,6 +78,9 @@
 <script src="js/views/result.js"></script>
 <script src="js/views/story.js"></script>
 <script src="js/views/parent.js"></script>
+<script src="js/views/house.js"></script>
+<script src="js/views/badges.js"></script>
+<script src="js/views/wrongbook.js"></script>
 
 </body>
 </html>
