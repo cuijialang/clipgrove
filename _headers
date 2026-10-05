@@ -1,0 +1,23 @@
+# Cloudflare Pages 响应头配置
+# 见 https://developers.cloudflare.com/pages/configuration/headers/
+
+# Service Worker 与清单必须每次校验，禁止强缓存，否则更新无法生效
+/sw.js
+  Cache-Control: no-cache
+
+/manifest.webmanifest
+  Cache-Control: no-cache
+
+# 静态资源按天缓存（文件名无指纹，故不用 immutable）
+/assets/*
+  Cache-Control: public, max-age=86400
+
+/css/*
+  Cache-Control: public, max-age=86400
+
+/js/*
+  Cache-Control: public, max-age=86400
+
+# 允许麦克风（同源），跟读/角色扮演玩法需要
+/*
+  Permissions-Policy: microphone=(self)

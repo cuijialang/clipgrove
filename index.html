@@ -9,6 +9,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="description" content="瓜瓜英语 —— 面向 4-6 岁儿童的英语启蒙高保真交互原型，参照叽里呱啦功能架构自建">
 <title>瓜瓜英语 · 4-6岁儿童英语启蒙</title>
+
+<!-- PWA：安装到主屏幕所需（manifest + 图标） -->
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/app/icon-192.png">
+<link rel="apple-touch-icon" href="assets/img/app/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="瓜瓜英语">
+
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/views.css">
@@ -81,6 +88,15 @@
 <script src="js/views/house.js"></script>
 <script src="js/views/badges.js"></script>
 <script src="js/views/wrongbook.js"></script>
+
+<!-- Service Worker：仅在 https / localhost 下生效，file:// 打开会自动跳过 -->
+<script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function () { /* 离线打开时忽略 */ });
+  });
+}
+</script>
 
 </body>
 </html>

@@ -1,0 +1,35 @@
+{
+  "name": "瓜瓜英语 · 儿童英语启蒙",
+  "short_name": "瓜瓜英语",
+  "description": "面向 4-6 岁儿童的英语启蒙：11 个单元 88 词、11 种游戏化玩法、预热-学习-练习-复习-应用五环节闭环。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "fullscreen"],
+  "orientation": "portrait",
+  "background_color": "#FFF8EE",
+  "theme_color": "#FF7A45",
+  "categories": ["education", "kids"],
+  "icons": [
+    {
+      "src": "assets/img/app/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/app/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/app/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
